@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>ro.jtonic.bundles.plugin</id>
+    <name>M support</name>
+    <vendor email="antonel.pazargic@gmail.com" url="http://www.example.com">I Tech</vendor>
+    <idea-version since-build="181.4203.550"/>
+
+    <description><![CDATA[
+    I Tech Mer idea plugin
+    ]]></description>
+    <change-notes/>
+
+    <depends>com.intellij.modules.java</depends>
+    <!--<depends>org.jetbrains.kotlin</depends>-->
+
+    <actions>
+        <action class="ro.jtonic.handson.plugin.MyAction" id="MyAction"
+                text="My Action">
+            <add-to-group group-id="ToolsMenu"/>
+            <add-to-group group-id="WelcomeScreen.QuickStart"/>
+        </action>
+        <action class="ro.jtonic.handson.plugin.GenerationTool" id="GenerationTool"
+                text="Generation by Kotlin">
+            <add-to-group group-id="ToolsMenu"/>
+            <add-to-group group-id="WelcomeScreen.QuickStart"/>
+        </action>
+    </actions>
+</idea-plugin>
