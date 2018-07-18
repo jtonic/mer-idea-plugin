@@ -1,27 +1,25 @@
 <idea-plugin>
     <id>ro.jtonic.bundles.plugin</id>
     <name>M support</name>
+    <version>0.1.0</version>
     <vendor email="antonel.pazargic@gmail.com" url="http://www.example.com">I Tech</vendor>
-    <idea-version since-build="181.4203.550"/>
+    <description>Run configurations, templates, actions and intentions for Mer framework.</description>
 
-    <description><![CDATA[
-    I Tech Mer idea plugin
-    ]]></description>
-    <change-notes/>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="173"/>
 
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
     <depends>com.intellij.modules.java</depends>
     <!--<depends>org.jetbrains.kotlin</depends>-->
 
     <actions>
-        <action class="ro.jtonic.handson.plugin.MyAction" id="MyAction"
-                text="My Action">
-            <add-to-group group-id="ToolsMenu"/>
-            <add-to-group group-id="WelcomeScreen.QuickStart"/>
-        </action>
-        <action class="ro.jtonic.handson.plugin.GenerationTool" id="GenerationTool"
-                text="Generation by Kotlin">
-            <add-to-group group-id="ToolsMenu"/>
-            <add-to-group group-id="WelcomeScreen.QuickStart"/>
-        </action>
+        <group id="Mer.Settings" text="Mer settings" popup="true">
+            <separator/>
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <action class="ro.jtonic.handson.plugin.action.MerAction" id="MerAction"
+                    text="Mer...">
+            </action>
+        </group>
     </actions>
 </idea-plugin>

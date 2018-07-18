@@ -72,10 +72,11 @@ intellij {
 
     // uncomment version and comment out the localPath to fetch the IDE from jetbrains REPO.
     // Jetbrains product releases -> https://www.jetbrains.com/intellij-repository/releases
-    version = 'IC-181.5540.7'
+    // 181.4203.550 -> 2018.1
+    version = 'IC-173.3727.127'
     updateSinceUntilBuild = false
     // The kotlin idea plugin versions -> https://plugins.jetbrains.com/plugin/6954-kotlin
-    plugins 'org.jetbrains.kotlin:1.2.51-release-IJ2018.1-1'
+    plugins 'org.jetbrains.kotlin:1.2.41-release-IJ2017.3-1'
     pluginName 'Mer'
     // MAC-OS
     // localPath 'xxx/Library/Application Support/JetBrains/Toolbox/apps/IDEA-C/ch-0/173.4548.28/IntelliJ IDEA CE.app/Contents'
@@ -85,6 +86,9 @@ intellij {
 }
 
 runIde {
+    // where jbre can be downloaded from
+    // https://dl.bintray.com/jetbrains/intellij-jdk/
+    // https://dl.bintray.com/jetbrains/intellij-jdk/jbrex8u152b1136.29_osx_x64.tar.gz
     // jbreVersion 'jbrex8u152b1136.29'
     // ideaDirectory '/Users/antonelpazargic/Library/Application Support/JetBrains/Toolbox/apps/IDEA-C/ch-0/173.4548.28'
 }
