@@ -21,7 +21,7 @@
                     text="Mer...">
 
 <!--
-                further examples about the shorcuts
+                further examples about the key shortcuts
                 https://www.jetbrains.org/intellij/sdk/docs/basics/action_system.html
 -->
                 <!--<keyboard-shortcut first-keystroke="control alt shift 1" second-keystroke="M" keymap="$default"/>-->

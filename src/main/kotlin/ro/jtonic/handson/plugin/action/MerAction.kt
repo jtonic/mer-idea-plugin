@@ -4,6 +4,7 @@ import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import ro.jtonic.handson.plugin.ui.MerDialog
 
+
 /**
  * Created by Antonel Ernest Pazargic on 29/03/2018.
  *

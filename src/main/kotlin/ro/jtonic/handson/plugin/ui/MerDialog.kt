@@ -1,7 +1,12 @@
 package ro.jtonic.handson.plugin.ui
 
+import com.intellij.notification.NotificationDisplayType
+import com.intellij.notification.NotificationGroup
+import com.intellij.notification.NotificationType
+import com.intellij.notification.Notifications
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
+
 
 /**
  * Created by Antonel Ernest Pazargic on 18/07/2018.
@@ -23,6 +28,10 @@ class MerDialog(private val project: Project) : DialogWrapper(project) {
     override fun doOKAction() {
         println("project = $project")
         println("Project name: ${form.txtPrjName.text}")
+
+        val notificationGroup = NotificationGroup("Mer", NotificationDisplayType.STICKY_BALLOON, true)
+        val notification = notificationGroup.createNotification("Mer", "Success", "Successfully created project '${project.name}'.", NotificationType.INFORMATION)
+        Notifications.Bus.notify(notification, project)
         close(OK_EXIT_CODE)
     }
 }
