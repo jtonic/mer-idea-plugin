@@ -29,9 +29,11 @@ class MerDialog(private val project: Project) : DialogWrapper(project) {
         println("project = $project")
         println("Project name: ${form.txtPrjName.text}")
 
-        val notificationGroup = NotificationGroup("Mer", NotificationDisplayType.STICKY_BALLOON, true)
-        val notification = notificationGroup.createNotification("Mer", "Success", "Successfully created project '${project.name}'.", NotificationType.INFORMATION)
-        Notifications.Bus.notify(notification, project)
-        close(OK_EXIT_CODE)
+        NotificationGroup("Mer", NotificationDisplayType.STICKY_BALLOON, true).run {
+            createNotification("Mer", "Success", "Successfully created project '${project.name}'.", NotificationType.INFORMATION)
+        }.also {
+            Notifications.Bus.notify(it, project)
+            close(OK_EXIT_CODE)
+        }
     }
 }
