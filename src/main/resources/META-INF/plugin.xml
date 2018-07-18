@@ -19,6 +19,13 @@
             <add-to-group group-id="ToolsMenu" anchor="last"/>
             <action class="ro.jtonic.handson.plugin.action.MerAction" id="MerAction"
                     text="Mer...">
+
+<!--
+                further examples about the shorcuts
+                https://www.jetbrains.org/intellij/sdk/docs/basics/action_system.html
+-->
+                <!--<keyboard-shortcut first-keystroke="control alt shift 1" second-keystroke="M" keymap="$default"/>-->
+                <keyboard-shortcut first-keystroke="control alt M" keymap="$default"/>
             </action>
         </group>
     </actions>
