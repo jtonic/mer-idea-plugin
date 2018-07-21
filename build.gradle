@@ -76,10 +76,10 @@ intellij {
     version = 'IC-173.3727.127'
     updateSinceUntilBuild = false
     // The kotlin idea plugin versions -> https://plugins.jetbrains.com/plugin/6954-kotlin
-    plugins 'org.jetbrains.kotlin:1.2.41-release-IJ2017.3-1'
+    plugins 'org.jetbrains.kotlin:1.2.51-release-IJ2017.3-1', 'maven', 'gradle'
     pluginName 'Mer'
     // MAC-OS
-    // localPath 'xxx/Library/Application Support/JetBrains/Toolbox/apps/IDEA-C/ch-0/173.4548.28/IntelliJ IDEA CE.app/Contents'
+     localPath 'lib/ideaIC-173.3727.127'
     // Windows
     // version 'IC-181.4445.78'
     // localPath '/Users/antonelpazargic/Library/Application Support/JetBrains/Toolbox/apps/IDEA-C/ch-0/173.4548.28'

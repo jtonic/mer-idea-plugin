@@ -11,6 +11,8 @@
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <depends>com.intellij.modules.java</depends>
+    <depends>org.jetbrains.idea.maven</depends>
+    <depends>org.jetbrains.plugins.gradle</depends>
     <!--<depends>org.jetbrains.kotlin</depends>-->
 
     <actions>
@@ -27,6 +29,8 @@
                 <!--<keyboard-shortcut first-keystroke="control alt shift 1" second-keystroke="M" keymap="$default"/>-->
                 <keyboard-shortcut first-keystroke="control alt M" keymap="$default"/>
             </action>
+            <action id="AddMvnRepoAction" class="ro.jtonic.handson.plugin.action.AddMvnRepoAction"
+                    text="Add maven repository"/>
         </group>
     </actions>
 </idea-plugin>
