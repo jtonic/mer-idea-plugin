@@ -1,0 +1,51 @@
+// Use the  gradle-download-task plugin to download:
+// 1. IntelliJ Idea CE from
+// https://www.jetbrains.com/intellij-repository/releases/com/jetbrains/intellij/idea/ideaIC/173.3727.127/
+// ideaIC-173.3727.127.pom
+// ideaIC-173.3727.127-sources.jar
+// ideaIC-173.3727.127.zip
+
+// 2. all OS flavoured jbre version jbrex8u152b1136.29 from
+// https://dl.bintray.com/jetbrains/intellij-jdk/
+
+// gradle-download-task:
+//      https://github.com/michel-kraemer/gradle-download-task
+//      https://michelkraemer.com/recipes-for-gradle-download/
+
+task downloadIdeaSandbox(type: Download) {
+    group = "mer"
+    src("https://www.jetbrains.com/intellij-repository/releases/com/jetbrains/intellij/idea/ideaIC/${ideaICVersion}/${project.ideaIC}.zip")
+    dest("$projectDir/lib/ideaIC/${project.ideaIC}.zip")
+    overwrite(false)
+}
+
+//noinspection GroovyAssignabilityCheck
+task uzipIdeaSandbox(type: Copy, dependsOn: downloadIdeaSandbox) {
+    group("mer")
+    from(zipTree(downloadIdeaSandbox.dest))
+    into("$projectDir/lib/ideaIC/$ideaIC")
+}
+
+task downloadJbrex(type: Download) {
+    group("mer")
+    src([
+            "https://dl.bintray.com/jetbrains/intellij-jdk/${jbrexVersion}_osx_x64.tar.gz",
+            "https://dl.bintray.com/jetbrains/intellij-jdk/${jbrexVersion}_linux_x64.tar.gz",
+            "https://dl.bintray.com/jetbrains/intellij-jdk/${jbrexVersion}_linux_x86.tar.gz",
+            "https://dl.bintray.com/jetbrains/intellij-jdk/${jbrexVersion}_windows_x64.tar.gz",
+            "https://dl.bintray.com/jetbrains/intellij-jdk/${jbrexVersion}_windows_x86.tar.gz"
+    ])
+    dest("$projectDir/lib/jbre/${jbrexVersion}")
+    overwrite(false)
+}
+
+// tasks dependencies
+// https://stackoverflow.com/questions/32907275/gradle-custom-task-which-runs-multiple-tasks
+//noinspection GroovyAssignabilityCheck
+task prepareIdea {
+    group = "mer"
+    dependsOn("downloadIdeaSandbox")
+    dependsOn("uzipIdeaSandbox")
+    dependsOn("downloadJbrex")
+    tasks.findByName("uzipIdeaSandbox").mustRunAfter(("downloadIdeaSandbox"))
+}

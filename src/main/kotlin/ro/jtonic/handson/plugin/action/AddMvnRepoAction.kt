@@ -17,6 +17,7 @@ import org.jetbrains.plugins.gradle.integrations.maven.MavenRepositoriesHolder
 class AddMvnRepoAction : AnAction() {
 
     override fun actionPerformed(e: AnActionEvent?) {
+        val a = 2
 
         val mavenRepositoryHolder = MavenRepositoriesHolder.getInstance(e?.project)
 
