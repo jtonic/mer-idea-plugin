@@ -72,8 +72,13 @@ compileJava {
 
 
 intellij {
+
+    type = 'IC' // IU | JPS | JPS | RS | RD   - IC is the default
+    
     pluginName = "Mer"
     // The kotlin idea plugin versions -> https://plugins.jetbrains.com/plugin/6954-kotlin
+    downloadSources = false
+//    plugins = ["Kotlin", "maven", "gradle"]
     plugins = ["org.jetbrains.kotlin:$kotlinVersion-release-IJ2018.2-1", "maven", "gradle"]
 
     // for IntelliJ Idea build numbers see

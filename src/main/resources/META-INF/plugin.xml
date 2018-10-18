@@ -13,10 +13,15 @@
     <depends>com.intellij.modules.java</depends>
     <depends>org.jetbrains.idea.maven</depends>
     <depends>org.jetbrains.plugins.gradle</depends>
-    <!--<depends>org.jetbrains.kotlin</depends>-->
+    <depends>org.jetbrains.kotlin</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <facetType implementation="ro.jtonic.handson.plugin.facet.MerFacetType"/>
+        <framework.detector implementation="ro.jtonic.handson.plugin.framework.MerFrameworkDetector"/>
+    </extensions>
 
     <actions>
-        <group id="Mer.Settings" text="Mer settings" popup="true">
+        <group id="Mer.Settings" text="Merak" popup="true">
             <separator/>
             <add-to-group group-id="ToolsMenu" anchor="last"/>
             <action class="ro.jtonic.handson.plugin.action.MerAction" id="MerAction"
@@ -31,6 +36,8 @@
             </action>
             <action id="AddMvnRepoAction" class="ro.jtonic.handson.plugin.action.AddMvnRepoAction"
                     text="Add maven repository"/>
+            <action id="MerParentInPomFile" class="ro.jtonic.handson.plugin.action.MerParentInPomFileAction"
+                    text="Is a merak project?"/>
         </group>
     </actions>
 </idea-plugin>
