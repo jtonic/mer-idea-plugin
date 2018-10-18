@@ -13,9 +13,14 @@ TODO:
 - create a new wizard to
     - create a project using an archetype
     - some of the archetype input properties has to be filled in UI
-- create a Mer framework
-- autodetect Mer framework by:
-    - finding out the junit in the pom.xml dependencies
+- [>] create a Mer framework
+- [>] create a Mer facet
+- [V] autodetect Mer framework by:
+    - find the pom.xml file and check if the parent's artifact has a specified value
+
+- Mer facet/framework configuration based on application.properties files entries
+    - my.settings.enabled=true (this are capabilities)
+    
 - Mer settings
 - sticky balloon should have a [link](http://blog.thibaulthelsmoortel.be/java/clickable-links-balloon-notifications-intellij-plugin/) to open:
     - a web page opened with the default system browser
