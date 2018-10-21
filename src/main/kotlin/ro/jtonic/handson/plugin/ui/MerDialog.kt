@@ -18,7 +18,7 @@ class MerDialog(private val project: Project) : DialogWrapper(project) {
 
     init {
         isModal = true
-        title = "Mer..."
+        title = "Merak"
         form.setProjectName(project.name)
         init()
     }

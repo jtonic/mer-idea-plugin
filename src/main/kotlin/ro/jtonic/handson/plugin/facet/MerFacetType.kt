@@ -5,6 +5,8 @@ import com.intellij.facet.FacetType
 import com.intellij.facet.FacetTypeId
 import com.intellij.openapi.module.Module
 import com.intellij.openapi.module.ModuleType
+import ro.jtonic.handson.plugin.icon.Icons
+import javax.swing.Icon
 
 /**
  * Created by Antonel Ernest Pazargic on 16/10/2018.
@@ -21,6 +23,9 @@ class MerFacetType : FacetType<MerFacet, MerFacetConfiguration>(ID, "Mer", "Mer"
 
     override fun isSuitableModuleType(moduleType: ModuleType<*>): Boolean =
         true
+
+    override fun getIcon(): Icon? =
+        Icons.MERAK
 
     companion object {
         val ID = FacetTypeId<MerFacet>("Mer")

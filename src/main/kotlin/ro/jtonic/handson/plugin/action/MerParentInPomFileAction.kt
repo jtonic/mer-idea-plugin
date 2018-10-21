@@ -35,6 +35,6 @@ class MerParentInPomFileAction : AnAction() {
 
         logger<MerParentInPomFileAction>().info("Is merak project: $merakProject")
 
-        Messages.showMessageDialog("Yes. It's a merak project.", "Information", Messages.getInformationIcon())
+        Messages.showMessageDialog("Yes. It's a merak project.", "Information", Messages.getErrorIcon())
     }
 }

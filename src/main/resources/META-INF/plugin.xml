@@ -25,7 +25,7 @@
             <separator/>
             <add-to-group group-id="ToolsMenu" anchor="last"/>
             <action class="ro.jtonic.handson.plugin.action.MerAction" id="MerAction"
-                    text="Mer...">
+                    text="Merak...">
 
 <!--
                 further examples about the key shortcuts
@@ -37,7 +37,7 @@
             <action id="AddMvnRepoAction" class="ro.jtonic.handson.plugin.action.AddMvnRepoAction"
                     text="Add maven repository"/>
             <action id="MerParentInPomFile" class="ro.jtonic.handson.plugin.action.MerParentInPomFileAction"
-                    text="Is a merak project?"/>
+                    text="Is a merak project?" icon="/icons/birds_16.png"/>
         </group>
     </actions>
 </idea-plugin>
