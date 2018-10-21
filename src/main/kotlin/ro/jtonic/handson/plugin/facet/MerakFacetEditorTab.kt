@@ -5,7 +5,7 @@ import com.intellij.facet.ui.FacetEditorTab
 import javax.swing.JComponent
 import javax.swing.JLabel
 
-class MerFacetEditorTab(editorContext: FacetEditorContext) : FacetEditorTab() {
+class MerakFacetEditorTab(editorContext: FacetEditorContext) : FacetEditorTab() {
 
     override fun isModified(): Boolean =
             false

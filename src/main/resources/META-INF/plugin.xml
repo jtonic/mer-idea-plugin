@@ -1,12 +1,25 @@
 <idea-plugin>
-    <id>ro.jtonic.bundles.plugin</id>
-    <name>M support</name>
+    <id>ro.jtonic.plugins.merak</id>
+    <name>Merak framework support</name>
     <version>0.1.0</version>
-    <vendor email="antonel.pazargic@gmail.com" url="http://www.example.com">I Tech</vendor>
-    <description>Run configurations, templates, actions and intentions for Mer framework.</description>
-
+    <vendor email="antonel.pazargic@gmail.com" url="http://www.example.com">JTonic Tech</vendor>
+    <description>
+        <![CDATA[
+            <h4>This plugin enables Merak framework support.</h4>
+            <br><b>The following coding assistance features are(will be) available:</b>
+            <ul>
+                <li>Framework/Facet detector.</li>
+                <li>Add facet to module.</li>
+                <li>New Project wizard (single module maven project).</li>
+                <li>Line marker</li>
+                <li>Navigation in the source code.</li>
+                <li>Integrated documentation[TBD].</li>
+                <li>Merak settings</li>
+            </ul>
+      ]]>
+    </description>
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="173"/>
+    <idea-version since-build="173"/> <!--version: 2017.3-->
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
@@ -16,15 +29,15 @@
     <depends>org.jetbrains.kotlin</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <facetType implementation="ro.jtonic.handson.plugin.facet.MerFacetType"/>
-        <framework.detector implementation="ro.jtonic.handson.plugin.framework.MerFrameworkDetector"/>
+        <facetType implementation="ro.jtonic.handson.plugin.facet.MerakFacetType"/>
+        <framework.detector implementation="ro.jtonic.handson.plugin.framework.MerakFrameworkDetector"/>
     </extensions>
 
     <actions>
-        <group id="Mer.Settings" text="Merak" popup="true">
+        <group id="Merak.Settings" text="Merak" popup="true">
             <separator/>
             <add-to-group group-id="ToolsMenu" anchor="last"/>
-            <action class="ro.jtonic.handson.plugin.action.MerAction" id="MerAction"
+            <action class="ro.jtonic.handson.plugin.action.MerakAction" id="MerakAction"
                     text="Merak...">
 
 <!--
@@ -36,7 +49,7 @@
             </action>
             <action id="AddMvnRepoAction" class="ro.jtonic.handson.plugin.action.AddMvnRepoAction"
                     text="Add maven repository"/>
-            <action id="MerParentInPomFile" class="ro.jtonic.handson.plugin.action.MerParentInPomFileAction"
+            <action id="MerakParentInPomFile" class="ro.jtonic.handson.plugin.action.MerakParentInPomFileAction"
                     text="Is a merak project?" icon="/icons/birds_16.png"/>
         </group>
     </actions>

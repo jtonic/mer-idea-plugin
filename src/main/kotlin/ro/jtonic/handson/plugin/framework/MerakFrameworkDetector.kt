@@ -15,23 +15,22 @@ import com.intellij.psi.xml.XmlFile
 import com.intellij.util.indexing.FileContent
 import com.intellij.util.xml.DomManager
 import org.jetbrains.idea.maven.dom.model.MavenDomProjectModel
-import ro.jtonic.handson.plugin.facet.MerFacet
-import ro.jtonic.handson.plugin.facet.MerFacetConfiguration
-import ro.jtonic.handson.plugin.facet.MerFacetType
-import java.util.*
+import ro.jtonic.handson.plugin.facet.MerakFacet
+import ro.jtonic.handson.plugin.facet.MerakFacetConfiguration
+import ro.jtonic.handson.plugin.facet.MerakFacetType
 
 /**
  * Created by Antonel Ernest Pazargic on 18/10/2018.
  *
  * @author Antonel Ernest Pazargic
  */
-class MerFrameworkDetector : FacetBasedFrameworkDetector<MerFacet, MerFacetConfiguration>("Mer", 1) {
+class MerakFrameworkDetector : FacetBasedFrameworkDetector<MerakFacet, MerakFacetConfiguration>("Merak", 1) {
 
     override fun createSuitableFilePattern(): ElementPattern<FileContent> =
             FileContentPattern.fileContent().withName(StandardPatterns.string().matches("pom.xml"))
 
-    override fun getFacetType(): FacetType<MerFacet, MerFacetConfiguration> =
-            MerFacetType.INSTANCE
+    override fun getFacetType(): FacetType<MerakFacet, MerakFacetConfiguration> =
+            MerakFacetType.INSTANCE
 
     override fun getFileType(): FileType =
             XmlFileType.INSTANCE

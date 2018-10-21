@@ -17,7 +17,7 @@ import org.jetbrains.kotlin.idea.refactoring.toPsiFile
  *
  * @author Antonel Ernest Pazargic
  */
-class MerParentInPomFileAction : AnAction() {
+class MerakParentInPomFileAction : AnAction() {
 
     override fun actionPerformed(e: AnActionEvent?) {
         e!!
@@ -33,7 +33,7 @@ class MerParentInPomFileAction : AnAction() {
             it?.xmlTag?.findFirstSubTag("parent")?.findFirstSubTag("artifactId")?.value?.text
         }?.let { true } ?: false
 
-        logger<MerParentInPomFileAction>().info("Is merak project: $merakProject")
+        logger<MerakParentInPomFileAction>().info("Is merak project: $merakProject")
 
         Messages.showMessageDialog("Yes. It's a merak project.", "Information", Messages.getErrorIcon())
     }

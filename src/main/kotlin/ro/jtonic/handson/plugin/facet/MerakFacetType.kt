@@ -13,13 +13,13 @@ import javax.swing.Icon
  *
  * @author Antonel Ernest Pazargic
  */
-class MerFacetType : FacetType<MerFacet, MerFacetConfiguration>(ID, "Mer", "Mer") {
+class MerakFacetType : FacetType<MerakFacet, MerakFacetConfiguration>(ID, "Merak", "Merak") {
 
-    override fun createFacet(module: Module, name: String, configuration: MerFacetConfiguration, underlyingFacet: Facet<*>?): MerFacet =
-        MerFacet(this, module, name, configuration, underlyingFacet)
+    override fun createFacet(module: Module, name: String, configuration: MerakFacetConfiguration, underlyingFacet: Facet<*>?): MerakFacet =
+        MerakFacet(this, module, name, configuration, underlyingFacet)
 
-    override fun createDefaultConfiguration(): MerFacetConfiguration =
-            MerFacetConfiguration()
+    override fun createDefaultConfiguration(): MerakFacetConfiguration =
+            MerakFacetConfiguration()
 
     override fun isSuitableModuleType(moduleType: ModuleType<*>): Boolean =
         true
@@ -28,7 +28,7 @@ class MerFacetType : FacetType<MerFacet, MerFacetConfiguration>(ID, "Mer", "Mer"
         Icons.MERAK
 
     companion object {
-        val ID = FacetTypeId<MerFacet>("Mer")
-        val INSTANCE = MerFacetType()
+        val ID = FacetTypeId<MerakFacet>("Merak")
+        val INSTANCE = MerakFacetType()
     }
 }

@@ -14,7 +14,7 @@ import com.intellij.openapi.ui.DialogWrapper
  */
 class MerDialog(private val project: Project) : DialogWrapper(project) {
 
-    private val form = MerForm()
+    private val form = MerakForm()
 
     init {
         isModal = true
@@ -29,8 +29,8 @@ class MerDialog(private val project: Project) : DialogWrapper(project) {
         println("project = $project")
         println("Project name: ${form.txtPrjName.text}")
 
-        NotificationGroup("Mer", NotificationDisplayType.STICKY_BALLOON, true).run {
-            createNotification("Mer", "Success", "Successfully created project '${project.name}'.", NotificationType.INFORMATION)
+        NotificationGroup("Merak", NotificationDisplayType.STICKY_BALLOON, true).run {
+            createNotification("Merak", "Success", "Successfully created project '${project.name}'.", NotificationType.INFORMATION)
         }.also {
             Notifications.Bus.notify(it, project)
             close(OK_EXIT_CODE)

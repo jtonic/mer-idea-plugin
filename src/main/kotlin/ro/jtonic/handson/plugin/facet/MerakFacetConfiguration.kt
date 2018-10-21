@@ -6,13 +6,13 @@ import com.intellij.facet.ui.FacetEditorTab
 import com.intellij.facet.ui.FacetValidatorsManager
 import com.intellij.openapi.Disposable
 
-class MerFacetConfiguration : FacetConfiguration, Disposable {
+class MerakFacetConfiguration : FacetConfiguration, Disposable {
 
     override fun dispose() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     override fun createEditorTabs(editorContext: FacetEditorContext, validatorsManager: FacetValidatorsManager?): Array<FacetEditorTab> {
-        return arrayOf(MerFacetEditorTab(editorContext))
+        return arrayOf(MerakFacetEditorTab(editorContext))
     }
 }

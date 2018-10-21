@@ -16,7 +16,7 @@ import javax.swing.JTextField;
  *
  * @author Antonel Ernest Pazargic
  */
-public class MerForm {
+public class MerakForm {
   private JTextField txtPrjName;
   private JLabel lblPrjName;
   JPanel panel;

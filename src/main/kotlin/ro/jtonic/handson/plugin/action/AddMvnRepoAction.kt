@@ -22,14 +22,14 @@ class AddMvnRepoAction : AnAction() {
         val mavenRepositoryHolder = MavenRepositoriesHolder.getInstance(e?.project)
 
         mavenRepositoryHolder.remoteRepositories.forEach {
-            Notifications.Bus.notify(Notification("Mer", "Maven repo", "id: ${it.id}, url: ${it.url}", NotificationType.INFORMATION))
+            Notifications.Bus.notify(Notification("Merak", "Maven repo", "id: ${it.id}, url: ${it.url}", NotificationType.INFORMATION))
         }
 
         val mavenRemoteRepository = MavenRemoteRepository("central", "bintray", "http://jcenter.bintray.com", "", MavenRemoteRepository.Policy(true, "", ""), MavenRemoteRepository.Policy(false, "", ""))
         mavenRepositoryHolder.update(setOf(mavenRemoteRepository))
 
         mavenRepositoryHolder.remoteRepositories.forEach {
-            Notifications.Bus.notify(Notification("Mer", "Maven repo", "id: ${it.id}, url: ${it.url}", NotificationType.INFORMATION))
+            Notifications.Bus.notify(Notification("Merak", "Maven repo", "id: ${it.id}, url: ${it.url}", NotificationType.INFORMATION))
         }
     }
 }

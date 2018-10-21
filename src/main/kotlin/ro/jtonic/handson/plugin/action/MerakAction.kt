@@ -10,7 +10,7 @@ import ro.jtonic.handson.plugin.ui.MerDialog
  *
  * @author Antonel Ernest Pazargic
  */
-class MerAction : AnAction() {
+class MerakAction : AnAction() {
 
     override fun actionPerformed(e: AnActionEvent?) {
         e?.project?.let {

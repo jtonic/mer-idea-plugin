@@ -75,7 +75,7 @@ intellij {
 
     type = 'IC' // IU | JPS | JPS | RS | RD   - IC is the default
     
-    pluginName = "Mer"
+    pluginName = "Merak"
     // The kotlin idea plugin versions -> https://plugins.jetbrains.com/plugin/6954-kotlin
     downloadSources = false
 //    plugins = ["Kotlin", "maven", "gradle"]
@@ -115,8 +115,23 @@ runIde {
 
 patchPluginXml {
     changeNotes("""
-      Add change notes here.<br>
-      <em>most HTML tags may be used</em>""")
+        <h4>v.0.0.1</h4>
+        <b>Implemented features:</b>
+        <ul>
+            <li><div><i>Framework detector</i></div></li>
+            <li><div><i>Plugin information</i></div></li>
+        </ul>
+        <b>Fixed bugs:</b>
+        <ul></ul>
+        <b>Refactoring:</b>
+        <ul>
+            <li>Mer -> Merak</li>
+        </ul>
+        <b>Documentation:</b>
+        <ul>
+            <li>More structured md files</li>
+        </ul>
+""")
 }
 
 task wrapper(type: Wrapper) {

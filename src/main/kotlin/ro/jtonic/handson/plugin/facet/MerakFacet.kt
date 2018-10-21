@@ -4,13 +4,13 @@ import com.intellij.facet.Facet
 import com.intellij.openapi.module.Module
 import com.intellij.openapi.util.Disposer
 
-class MerFacet(
-        facetType: MerFacetType,
+class MerakFacet(
+        facetType: MerakFacetType,
         module: Module,
         name: String,
-        configuration: MerFacetConfiguration,
+        configuration: MerakFacetConfiguration,
         underlyingFacet: Facet<*>?
-) : Facet<MerFacetConfiguration>(
+) : Facet<MerakFacetConfiguration>(
         facetType,
         module,
         name,
