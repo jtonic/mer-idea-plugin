@@ -31,6 +31,8 @@
     <extensions defaultExtensionNs="com.intellij">
         <facetType implementation="ro.jtonic.handson.plugin.facet.MerakFacetType"/>
         <framework.detector implementation="ro.jtonic.handson.plugin.framework.MerakFrameworkDetector"/>
+        <framework.type implementation="ro.jtonic.handson.plugin.framework.MerakFrameworkType" id="merak.framework.type"/>
+        <frameworkSupport implementation="ro.jtonic.handson.plugin.framework.MerakFrameworkSupportProvider" id="merak.framework.support"/>
     </extensions>
 
     <actions>

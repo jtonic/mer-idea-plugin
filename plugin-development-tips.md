@@ -25,4 +25,8 @@ HowTo
     [example](https://plugins.jetbrains.com/plugins/list?pluginId=org.intellij.scala)
     
     
-1. 
+1. How to get facets for a module
+
+```kotlin
+FacetManager.getInstance(module).getAllFacets(module) // returns Facet[]
+```

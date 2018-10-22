@@ -1,7 +1,8 @@
 TODO list
 ---
 
-- [>] create a Merak framework
+- [>] Module implementation
+- Add plugin development sdk sources
 - create a new wizard to
     - for a single module maven project (spring-boot project)
     - create a project using an archetype
@@ -29,4 +30,5 @@ Done
 - autodetect Merak framework by:
     - find the pom.xml file and check if the parent's artifact has a specified value
 - detect a Merak facet
+- create a Merak framework
 
