@@ -53,6 +53,8 @@
                     text="Add maven repository"/>
             <action id="MerakParentInPomFile" class="ro.jtonic.handson.plugin.action.MerakParentInPomFileAction"
                     text="Is a merak project?" icon="/icons/birds_16.png"/>
+            <action id="merak.actions.ideinfo" class="ro.jtonic.handson.plugin.action.IdeInfoAction"
+                    text="IDE info"/>
         </group>
     </actions>
 </idea-plugin>
