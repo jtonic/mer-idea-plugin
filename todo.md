@@ -2,10 +2,6 @@ TODO list
 ---
 
 - [>] Module implementation
-- Exercises:
-    - [V] _get all modules from project_
-    - get dependencies of the modules
-    - get module SDK
     - get the VirtualFile of the document opened in the editor
     - get File from the VirtualFile
     - get PSI element from VirtualFile
@@ -40,7 +36,12 @@ TODO list
 Done
 --
 - autodetect Merak framework by:
-    - find the pom.xml file and check if the parent's artifact has a specified value
-- detect a Merak facet
-- create a Merak framework
+    - ~~find the pom.xml file and check if the parent's artifact has a specified value~~
+- ~~detect a Merak facet~~
+- ~~create a Merak framework~~
+- Exercises:
+    - ~~get all modules from project~~
+    - ~~get dependencies of the modules~~
+    - ~~get module SDK~~
+
 
