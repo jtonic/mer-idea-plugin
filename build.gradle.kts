@@ -59,7 +59,7 @@ intellij {
     // Jetbrains product releases -> https://www.jetbrains.com/intellij-repository/releases
     // 181.4203.550 -> 2018.1
     if (offline) {
-        localPath = "lib/ideaIC/$ideaIC"
+        localPath = "offline/ideaIC/$ideaIC"
     } else {
         version = Versions.ideaIC
     }

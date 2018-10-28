@@ -47,7 +47,7 @@ tasks {
         group = "merak"
         dependsOn(downloadIdeaSandbox.get())
         from(zipTree(downloadIdeaSandbox.get().dest))
-        into("$projectDir/lib/ideaIC/$ideaIC")
+        into("$projectDir/offline/ideaIC/$ideaIC")
     }
 
     val downloadJbrex by registering(Download::class) {
@@ -80,6 +80,14 @@ tasks {
                 offline && !file(dest).exists()
             }
         }
+    }
+
+    val distributeIdea by registering(Zip::class) {
+        group = "merak"
+
+        archiveName = "lib.zip"
+        destinationDir = file("$projectDir/dist/$ideaIC-all")
+        from("$projectDir/lib")
     }
 
     // tasks dependencies
