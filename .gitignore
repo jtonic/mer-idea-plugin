@@ -8,6 +8,7 @@
 *.iws
 out/
 .idea_modules/
+buildSrc/build/
 
 # CMake
 cmake-build-debug/

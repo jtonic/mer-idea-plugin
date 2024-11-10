@@ -1,28 +1,29 @@
 TODO list
 ---
 
-- [>] Module implementation
-    - get the VirtualFile of the document opened in the editor
-    - get File from the VirtualFile
-    - get PSI element from VirtualFile
-    - add a line marker for a VirtualFile element (field)
-    - get file/virualfile/PSI from cache
+- [ ] make the project successfully compile and run with latest gradle version and java 17/21
+- [ ] Module implementation
+    - [ ] get the VirtualFile of the document opened in the editor
+    - [ ] get File from the VirtualFile
+    - [ ] get PSI element from VirtualFile
+    - [ ] add a line marker for a VirtualFile element (field)
+    - [ ] get file/virualfile/PSI from cache
     
     More info [here](https://www.jetbrains.org/intellij/sdk/docs/reference_guide/project_model/module.html),  [here](https://www.jetbrains.org/intellij/sdk/docs/basics/psi_cookbok.html), [here](https://www.youtube.com/watch?v=j2tvi4GbOr4)
     
-- Add plugin development sdk sources
+- [ ] add plugin development sdk sources
 - create a new wizard to
     - for a single module maven project (spring-boot project)
     - create a project using an archetype
     - some of the archetype input properties has to be filled in UI
-- add the Merak facet
-- add the merak icon in the editor gutter - SpringBootApplication
+- [ ] add the Merak facet
+- [ ] add the merak icon in the editor gutter - SpringBootApplication
 - in the merak facet dialog (based on properties plugin - application properties file):
     - tracing - on/off
     - global logging - on/off
     - service discovery - on/off
 - how to add a new maven remote repository
-- How to discover a facet to a maven module (multi module maven project)?
+- how to discover a facet to a maven module (multi module maven project)?
 - Merak facet/framework configuration based on application.properties files entries
     - my.settings.enabled=true (this are capabilities)
     
@@ -43,5 +44,4 @@ Done
     - ~~get all modules from project~~
     - ~~get dependencies of the modules~~
     - ~~get module SDK~~
-
-
+ 
